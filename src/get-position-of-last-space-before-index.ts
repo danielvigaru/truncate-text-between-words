@@ -5,11 +5,9 @@
  * @returns {Number} The position of the space
  */
 
-function getPositionOfLastSpaceBeforeIndex(text, index) {
+export default function getPositionOfLastSpaceBeforeIndex(text: string, index: number): number {
     const _text = text.slice(0, index + 1);
     const indexOfLastSpace = _text.lastIndexOf(" ");
 
     return indexOfLastSpace;
 }
-
-module.exports = getPositionOfLastSpaceBeforeIndex;

@@ -1,4 +1,4 @@
-const getPositionOfLastSpaceBeforeIndex = require("./get-position-of-last-space-before-index");
+import getPositionOfLastSpaceBeforeIndex from "./get-position-of-last-space-before-index";
 
 /**
  * Truncates text on the last space before the given index, and adds '...' at the end
@@ -7,7 +7,7 @@ const getPositionOfLastSpaceBeforeIndex = require("./get-position-of-last-space-
  * @returns Truncated text
  */
 
-function truncateText(text, maxLength) {
+export default function truncateText(text: string, maxLength: number): string {
     const _text = text.trim();
     if (_text.length <= maxLength) return _text;
 
@@ -17,5 +17,3 @@ function truncateText(text, maxLength) {
     const truncatedText = _text.slice(0, indexOfLastSpace) + "...";
     return truncatedText;
 }
-
-module.exports = truncateText;
