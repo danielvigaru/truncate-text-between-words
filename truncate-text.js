@@ -12,6 +12,7 @@ function truncateText(text, maxLength) {
     if (_text.length <= maxLength) return _text;
 
     const indexOfLastSpace = getPositionOfLastSpaceBeforeIndex(_text, maxLength);
+    if (indexOfLastSpace === -1) return "...";
 
     const truncatedText = _text.slice(0, indexOfLastSpace) + "...";
     return truncatedText;
