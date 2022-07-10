@@ -1,6 +1,6 @@
 {
   "name": "truncate-text-between-words",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Truncates the text at the last space before the given length.",
   "main": "index.js",
   "scripts": {
