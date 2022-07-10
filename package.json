@@ -1,0 +1,25 @@
+{
+  "name": "truncate-text",
+  "version": "1.0.0",
+  "description": "Truncates the text at the last space before the given length.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielvigaru/truncate-text.git"
+  },
+  "keywords": [
+    "text",
+    "truncate",
+    "shorten",
+    "split"
+  ],
+  "author": "Daniel Vigaru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielvigaru/truncate-text/issues"
+  },
+  "homepage": "https://github.com/danielvigaru/truncate-text#readme"
+}
