@@ -7,12 +7,20 @@ import getPositionOfLastSpaceBeforeIndex from "./get-position-of-last-space-befo
  * @returns Truncated text
  */
 
-export default function truncateText(text: string, maxLength: number): string {
+export default function truncateText(
+    text: string,
+    maxLength: number,
+    options?: {
+        hideIfNoWords: boolean;
+    }
+): string {
     const _text = text.trim();
     if (_text.length <= maxLength) return _text;
 
     const indexOfLastSpace = getPositionOfLastSpaceBeforeIndex(_text, maxLength);
-    if (indexOfLastSpace === -1) return "...";
+    if (indexOfLastSpace === -1) {
+        return options?.hideIfNoWords ? "" : "...";
+    }
 
     const truncatedText = _text.slice(0, indexOfLastSpace) + "...";
     return truncatedText;

@@ -1,5 +1,5 @@
 Truncates the text at the last space before the given length.
-Adds "..." to show that the text is truncated.
+Adds "..." to indicate that the text is truncated.
 
 ```javascript
 import truncateText from "truncate-text-between-words";
@@ -20,10 +20,13 @@ const TEXT = "Lorem ipsum dolor sit amet.";
 ## truncateText
 
 ```javascript
-truncateText(text, maxLength);
+truncateText( text, maxLength [, { hideIfNoWords }] );
 
 console.log(truncateText(TEXT, 3));
 // ...
+
+console.log(truncateText(TEXT, 3, { hideIfNoWords: true }));
+//
 
 console.log(truncateText(TEXT, 6));
 // Lorem...
