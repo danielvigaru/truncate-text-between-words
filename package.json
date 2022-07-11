@@ -17,8 +17,11 @@
   "keywords": [
     "text",
     "truncate",
+    "truncation",
+    "truncated",
     "shorten",
-    "split"
+    "split",
+    "ellipsis"
   ],
   "author": "Daniel Vigaru",
   "license": "ISC",
