@@ -1,13 +1,22 @@
 Truncates the text at the last space before the given length.
 Adds "..." to indicate that the text is truncated.
 
+## Installation
+```
+npm i truncate-text-between-words
+```
+
+## Usage
 ```javascript
 import truncateText from "truncate-text-between-words";
+```
+```javascript
 import { truncateText, getPositionOfLastSpaceBeforeIndex } from "truncate-text-between-words";
-
-// OR
-
+```
+```javascript
 const truncateText = require("truncate-text-between-words").default;
+```
+```javascript
 const { truncateText, getPositionOfLastSpaceBeforeIndex } = require("truncate-text-between-words");
 ```
 
