@@ -6,8 +6,5 @@
  */
 
 export default function getPositionOfLastSpaceBeforeIndex(text: string, index: number): number {
-    const _text = text.slice(0, index + 1);
-    const indexOfLastSpace = _text.lastIndexOf(" ");
-
-    return indexOfLastSpace;
+    return text.slice(0, index).lastIndexOf(" ");
 }

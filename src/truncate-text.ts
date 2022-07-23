@@ -11,7 +11,7 @@ export default function truncateText(
     text: string,
     maxLength: number,
     options?: {
-        hideIfNoWords: boolean;
+        hideIfNoWords?: boolean;
     }
 ): string {
     const _text = text.trim();
@@ -22,6 +22,5 @@ export default function truncateText(
         return options?.hideIfNoWords ? "" : "...";
     }
 
-    const truncatedText = _text.slice(0, indexOfLastSpace) + "...";
-    return truncatedText;
+    return _text.slice(0, indexOfLastSpace) + "...";
 }
