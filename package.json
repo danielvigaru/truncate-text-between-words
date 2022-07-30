@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielvigaru/truncate-text.git"
+    "url": "git+https://github.com/danielvigaru/truncate-text-between-words.git"
   },
   "keywords": [
     "text",
@@ -26,9 +26,9 @@
   "author": "Daniel Vigaru",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danielvigaru/truncate-text/issues"
+    "url": "https://github.com/danielvigaru/truncate-text-between-words/issues"
   },
-  "homepage": "https://github.com/danielvigaru/truncate-text#readme",
+  "homepage": "https://github.com/danielvigaru/truncate-text-between-words#readme",
   "devDependencies": {
     "typescript": "^4.7.4"
   }
