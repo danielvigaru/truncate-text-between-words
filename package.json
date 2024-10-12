@@ -2,7 +2,10 @@
   "name": "truncate-text-between-words",
   "version": "1.1.5",
   "description": "Truncates the text at the last space before the given length.",
-  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "exports": {
+    "import": "./lib/index.js"
+  },
   "files": [
     "lib/**/*"
   ],
