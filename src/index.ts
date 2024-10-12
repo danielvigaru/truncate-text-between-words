@@ -18,22 +18,32 @@ function getPositionOfLastSpaceBeforeIndex(
  * @param {Boolean} options.hideIfNoWords Hide the ellipsis if there are no words to show
  * @returns Truncated text
  */
+
+type TruncateTextOptions = {
+    hideIfNoWords?: boolean;
+};
+
 function truncateText(
     text: string,
     maxLength: number,
-    options?: {
-        hideIfNoWords?: boolean;
-    }
+    options?: TruncateTextOptions
 ): string {
     const _text = text.trim();
     if (_text.length <= maxLength) return _text;
+
+    const _options: Required<TruncateTextOptions> = Object.assign(
+        {
+            hideIfNoWords: false,
+        },
+        options
+    );
 
     const indexOfLastSpace = getPositionOfLastSpaceBeforeIndex(
         _text,
         maxLength
     );
     if (indexOfLastSpace === -1) {
-        return options?.hideIfNoWords ? '' : '...';
+        return _options.hideIfNoWords ? '' : '...';
     }
 
     return _text.slice(0, indexOfLastSpace) + '...';
