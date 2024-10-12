@@ -12,7 +12,8 @@
   "scripts": {
     "prebuild": "del-cli lib/*",
     "build": "tsc",
-    "test": "jest",
+    "test:once": "jest",
+    "test:watch": "jest --watchAll",
     "prepare": "husky"
   },
   "repository": {
