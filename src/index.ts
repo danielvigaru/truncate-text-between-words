@@ -4,8 +4,11 @@
  * @param {Number} index Searches for last space before this index
  * @returns {Number} The position of the space
  */
-function getPositionOfLastSpaceBeforeIndex(text: string, index: number): number {
-    return text.slice(0, index).lastIndexOf(" ");
+function getPositionOfLastSpaceBeforeIndex(
+    text: string,
+    index: number
+): number {
+    return text.slice(0, index).lastIndexOf(' ');
 }
 
 /**
@@ -25,13 +28,15 @@ function truncateText(
     const _text = text.trim();
     if (_text.length <= maxLength) return _text;
 
-    const indexOfLastSpace = getPositionOfLastSpaceBeforeIndex(_text, maxLength);
+    const indexOfLastSpace = getPositionOfLastSpaceBeforeIndex(
+        _text,
+        maxLength
+    );
     if (indexOfLastSpace === -1) {
-        return options?.hideIfNoWords ? "" : "...";
+        return options?.hideIfNoWords ? '' : '...';
     }
 
-    return _text.slice(0, indexOfLastSpace) + "...";
+    return _text.slice(0, indexOfLastSpace) + '...';
 }
 
-export default truncateText;
 export { getPositionOfLastSpaceBeforeIndex, truncateText };
