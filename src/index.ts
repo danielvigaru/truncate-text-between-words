@@ -11,18 +11,22 @@ function getPositionOfLastSpaceBeforeIndex(
     return text.slice(0, index).lastIndexOf(' ');
 }
 
+const ELLIPSIS = '…';
+const DOTS = '...';
+
+type TruncateTextOptions = {
+    hideIfNoWords?: boolean;
+    dotsInsteadOfEllipsis?: boolean;
+};
+
 /**
  * Truncates text on the last space before the given index, and adds '...' at the end
  * @param {String} text Text to be truncated
  * @param {Number} maxLength Desired max length. Output might be shorter because it's truncated on the last space found before the given maxLength
  * @param {Boolean} options.hideIfNoWords Hide the ellipsis if there are no words to show
+ * @param {Boolean} options.ellipsisInstedOfDots Use the ellipsis unicode character U+2026 instead of three dots
  * @returns Truncated text
  */
-
-type TruncateTextOptions = {
-    hideIfNoWords?: boolean;
-};
-
 function truncateText(
     text: string,
     maxLength: number,
@@ -32,8 +36,10 @@ function truncateText(
     if (_text.length <= maxLength) return _text;
 
     const _options: Required<TruncateTextOptions> = Object.assign(
+        {},
         {
             hideIfNoWords: false,
+            dotsInsteadOfEllipsis: false,
         },
         options
     );
@@ -43,10 +49,16 @@ function truncateText(
         maxLength
     );
     if (indexOfLastSpace === -1) {
-        return _options.hideIfNoWords ? '' : '...';
+        return _options.hideIfNoWords
+            ? ''
+            : _options.dotsInsteadOfEllipsis
+            ? DOTS
+            : ELLIPSIS;
     }
 
-    return _text.slice(0, indexOfLastSpace) + '...';
+    return _text.slice(0, indexOfLastSpace) + _options.dotsInsteadOfEllipsis
+        ? DOTS
+        : ELLIPSIS;
 }
 
 export { getPositionOfLastSpaceBeforeIndex, truncateText };

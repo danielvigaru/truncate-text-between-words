@@ -29,10 +29,15 @@ Parameters:
 ```typescript
 type TruncateTextOptions = {
     hideIfNoWords?: boolean;
+    dotsInsteadOfEllipsis?: boolean;
 };
 
 truncateText(text: string, maxLength: number, options?: TruncateTextOptions);
 ```
+
+### Options
+
+`hideIfNoWords` - default: `false` - Hide the ellipsis if there are no words to show
 
 ```javascript
 truncateText(TEXT, 3);
@@ -40,7 +45,13 @@ truncateText(TEXT, 3);
 
 truncateText(TEXT, 3, { hideIfNoWords: true });
 // Output:
+```
 
+`dotsInsteadOfEllipsis` - default: `false` - Use the ellipsis unicode character U+2026 instead of three dots
+
+### Other examples
+
+```javascript
 truncateText(TEXT, 6);
 // Output: Lorem...
 
