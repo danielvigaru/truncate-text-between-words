@@ -1,6 +1,6 @@
 {
   "name": "truncate-text-between-words",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Truncates the text at the last space before the given length.",
   "sideEffects": false,
   "main": "lib/index.cjs",
