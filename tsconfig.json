@@ -5,9 +5,8 @@
         "declaration": true,
         "outDir": "./lib",
         "strict": true,
-        "removeComments": true,
         "esModuleInterop": true,
-        "moduleResolution": "node"
+        "moduleResolution": "classic"
     },
     "include": ["src"],
     "exclude": ["node_modules", "**/*.test.ts"]
