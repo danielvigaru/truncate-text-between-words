@@ -56,9 +56,10 @@ function truncateText(
             : ELLIPSIS;
     }
 
-    return _text.slice(0, indexOfLastSpace) + _options.dotsInsteadOfEllipsis
-        ? DOTS
-        : ELLIPSIS;
+    return (
+        _text.slice(0, indexOfLastSpace) +
+        (_options.dotsInsteadOfEllipsis ? DOTS : ELLIPSIS)
+    );
 }
 
 export { getPositionOfLastSpaceBeforeIndex, truncateText };
