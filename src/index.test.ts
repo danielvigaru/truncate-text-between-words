@@ -10,7 +10,13 @@ beforeAll(() => {
 describe('truncateText', () => {
     describe('handle small index', () => {
         test('with ellipsis shown', () => {
-            expect(truncateText(TEXT, 3)).toBe('...');
+            expect(truncateText(TEXT, 3)).toBe('…');
+        });
+
+        test('dots instead of ellipsis', () => {
+            expect(truncateText(TEXT, 3, { dotsInsteadOfEllipsis: true })).toBe(
+                '...'
+            );
         });
 
         test('with ellipsis hidden', () => {
@@ -19,11 +25,11 @@ describe('truncateText', () => {
     });
 
     test('index on space', () => {
-        expect(truncateText(TEXT, 6)).toBe('Lorem...');
+        expect(truncateText(TEXT, 6)).toBe('Lorem…');
     });
 
     test('index inside word', () => {
-        expect(truncateText(TEXT, 15)).toBe('Lorem ipsum...');
+        expect(truncateText(TEXT, 15)).toBe('Lorem ipsum…');
     });
 
     describe('handle index bigger than string', () => {
