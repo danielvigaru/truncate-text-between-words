@@ -24,7 +24,7 @@ type TruncateTextOptions = {
  * @param {String} text Text to be truncated
  * @param {Number} maxLength Desired max length. Output might be shorter because it's truncated on the last space found before the given maxLength
  * @param {Boolean} options.hideIfNoWords Hide the ellipsis if there are no words to show
- * @param {Boolean} options.ellipsisInstedOfDots Use the ellipsis unicode character U+2026 instead of three dots
+ * @param {Boolean} options.ellipsisInstedOfDots Use three dots instead of the ellipsis unicode character U+2026
  * @returns Truncated text
  */
 function truncateText(

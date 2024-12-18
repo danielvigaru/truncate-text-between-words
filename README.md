@@ -47,7 +47,7 @@ truncateText(TEXT, 3, { hideIfNoWords: true });
 // Output:
 ```
 
-`dotsInsteadOfEllipsis` - default: `false` - Use the ellipsis unicode character U+2026 instead of three dots
+`dotsInsteadOfEllipsis` - default: `false` - Use three dots instead of the ellipsis unicode character U+2026
 
 ### Other examples
 
