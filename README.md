@@ -2,7 +2,6 @@ Truncates the text at the last space found before the given length. Adds "..." t
 
 [![CI](https://github.com/danielvigaru/truncate-text-between-words/actions/workflows/node.js.yml/badge.svg)](https://github.com/danielvigaru/truncate-text-between-words/actions/workflows/node.js.yml)
 [![npm](https://img.shields.io/badge/npm-FFF?style=flat&logo=npm&logoColor=fff&color=CB3837)](https://www.npmjs.com/package/truncate-text-between-words)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/truncate-text-between-words)](https://bundlephobia.com/package/truncate-text-between-words)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=flat&logo=ko-fi&logoColor=white&color=D34F4C)](https://ko-fi.com/Y8Y1DZBZU)
 
 ## Usage
